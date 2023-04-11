@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
         int indexScene = SceneManager.GetActiveScene().buildIndex;
         
         this.transform.position = new Vector3(-45.0200005f, 301.734985f, -43.0299988f);
-        if (indexScene == 1)
+        if (indexScene == 2)
             this.transform.position = new Vector3(0f, 301.734985f, -40f);
-        else if (indexScene == 2)
+        else if (indexScene == 3)
             this.transform.position = new Vector3(-43.9099998f, 301.734985f, -44.5400009f);
             _rb = GetComponent<Rigidbody>();
     }
