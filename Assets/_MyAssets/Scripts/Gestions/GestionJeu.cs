@@ -7,6 +7,7 @@ public class GestionJeu : MonoBehaviour
 {
     // Attributs
     private int _pointage = 0;
+    private float _tempsAffiche = 0;
     private float _tempsFinal = 0;
     private float _tempsDepart = 0;
 
@@ -14,11 +15,12 @@ public class GestionJeu : MonoBehaviour
     public float TempsFinal { get => _tempsFinal; set => _tempsFinal = value; }
     public float TempsDepart { get => _tempsDepart; set => _tempsDepart = value; }
     public int Pointage { get => _pointage; set => _pointage = value; }
+    public float TempsAffiche { get => _tempsAffiche; set => _tempsAffiche = value; }
 
     private void Awake()
     {
         int nbGestionJeu = FindObjectsOfType<GestionJeu>().Length;
-        if (nbGestionJeu > 2)
+        if (nbGestionJeu > 1)
         {
             Destroy(gameObject);
         }
@@ -44,7 +46,7 @@ public class GestionJeu : MonoBehaviour
 
     public void SetTempsFinal(float p_tempFinal)
     {
-        _tempsFinal = p_tempFinal - _tempsDepart;
+        _tempsFinal = p_tempFinal - _tempsDepart - _tempsAffiche;
     }
 
 

@@ -14,9 +14,9 @@ public class AffichageFinal : MonoBehaviour
     {
         _gestionJeu = FindObjectOfType<GestionJeu>();
         
-        _txtTempsTotal.text = "Temps Total : " + _gestionJeu.TempsFinal + " sec.";
+        _txtTempsTotal.text = "Temps Total : " + _gestionJeu.TempsFinal.ToString("f2") + " sec.";
         _txtAccorchagesTotal.text = "Nombres d'accrochages : " + _gestionJeu.Pointage;
         float pointageTotal = _gestionJeu.TempsFinal + _gestionJeu.Pointage;
-        _txtPointageTotal.text = "Pointage Final : " + pointageTotal + " sec.";
+        _txtPointageTotal.text = "Pointage Final : " + pointageTotal.ToString("f2") + " sec.";
     }
 }
